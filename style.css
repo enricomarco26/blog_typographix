@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: whitesmoke;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.main {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.main-featured-article img, .main-sub-articles img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+    background: whitesmoke;
+}
+
+.nav-left h1 {
+    color: rgb(51 , 51, 51);
+    font-size: 3rem;
+    transition: font-size 0.3s ease;
+}
+
+#navbar.scrolled .nav-left h1 {
+    font-size: 1.5rem;
+}
+
+.nav-right a {
+    margin-left: 20px;
+    color: hsl(0, 0%, 13%);
+    transition: color 0.3s;
+}
+
+    .nav-right a:hover {
+        color: hsl(0, 0%, 50%);
+    }
+
+
+/* Skeleton Styles     */
+.main-featured-article-skeleton {
+    margin-bottom: 50px;
+}
+
+.sub-article-skeleton {
+    flex: 1;
+    margin: 0 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.skeleton-image {
+    height: 300px;
+}
+
+.skeleton-line {
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+.skeleton-image, .skeleton-line {
+    background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.skeleton-line--large {
+    height: 40px;
+    margin: 40px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Shimmer Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+
+/* Featured Article Styles */
+.main-featured-article {
+    margin-bottom: 50px;
+}
+
+    .main-featured-article h1 {
+        font-size: 2.0rem;
+        color: rgb(51 , 51, 51);
+        margin: 15px 0;
+    }
+
+    .main-featured-article p {
+        font-size: 1.2rem;
+        color: rgb(85, 85, 85);
+        margin-bottom: 20px;
+    }
+
+
+/* Sub Articles Styles */
+.main-sub-articles {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .main-sub-articles img {
+        max-height: 150px;
+    }
+
+.sub-article {
+    flex: 1;
+    margin: 0 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+    .sub-article h2 {
+        font-size: 1.3rem;
+        margin: 15px 0;
+        color: rgb(33, 33, 33);
+    }
+
+    .sub-article p {
+        font-size: 1rem;
+        color: rgb(85, 85, 85);
+    }
+
+a {
+    text-decoration: none;
+    color: hsl(200, 100%, 50%);
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: hsl(200, 100%, 35%);
+    }
+
+
+/* Footer */
+footer {
+    color: rgb(51, 51, 51);
+    padding: 20px 0;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+    .social-icons a {
+        margin: 0 10px;
+        color: hsl(0, 0%, 13%);
+        transition: color 1.1s;
+        font-size: 1.5rem;
+    }
+
+    .social-icons a:hover {
+        color: hsl(0, 0%, 50%);
+    }
+
+
+/* Media Queries-------------- */
+
+/* Tablet */
+@media screen and (max-width:1025px) {
+    .nav-left h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .main-featured-article h1 {
+        font-size: 1.5rem;
+    }
+
+    .sub-article h2 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Smartphone Vertical */
+@media screen and (max-width:600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 5%;
+    }
+
+    .nav-right a {
+        margin-left: unset;
+        margin-right: 20px;
+    }
+
+    .main-featured-article h1 {
+        font-size: 1.3rem;
+    }
+
+    .main-featured-article p {
+        font-size: 1rem;
+    }
+
+    .main-sub-articles {
+        flex-direction: column;
+    }
+
+    .sub-article h2 {
+        margin-bottom: 20px;
+    }
+}
