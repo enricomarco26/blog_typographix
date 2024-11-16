@@ -1,0 +1,53 @@
+/* Featured Article Styles */
+.main-featured-article {
+    margin-bottom: 50px;
+
+    h1 {
+        font-size: 2.0rem;
+        color: var(--secondary-font-color);
+        margin: 15px 0;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: var(--primary-font-color);
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Sub Articles Styles */
+.main-sub-articles {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        max-height: 150px;
+    }
+}
+
+.sub-article {
+    @include article;
+
+    h2 {
+        font-size: 1.3rem;
+        margin: 15px 0;
+        color: var(--secondary-font-color);
+    }
+
+    p {
+        font-size: 1rem;
+        color: var(--primary-font-color);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
