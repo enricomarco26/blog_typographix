@@ -1,3 +1,9 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @mixin article {
     flex: 1;
     margin: 0 15px;
